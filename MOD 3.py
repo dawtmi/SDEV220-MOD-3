@@ -24,6 +24,7 @@ class Vehicle:
     def __init__(self, vehicle_type: str) -> None:
         self.vehicle_type: str = vehicle_type
 
+
 class Automobile(Vehicle):
     def __init__(self, vehicle_type: str, year: int, make: str, model: str, doors: int, roof: str) -> None:
         super().__init__(vehicle_type)
@@ -34,13 +35,18 @@ class Automobile(Vehicle):
             self.doors: int = doors         #(2 or 4)
         else:
             raise ValueError("Door must be 2 or 4")
-        if rood.lower() == 'solid' or roof.lower() == 'sun roof':
+        if roof.lower() == 'solid' or roof.lower() == 'sun roof':
             self.roof: str = roof.lower()       #(solid or sun roof).
         else:
             raise ValueError('roof must be "solid" or "sun roof"')
     
-    def __init__(self):
-        return (f"Vehicle type: {self.vehicle_type}\n")
+    def __str__(self):
+        return (f"Vehicle type: {self.vehicle_type}\n"
+                f"Year: {self.year}\n"
+                f"Make: {self.make}\n"
+                f"Model: {self.model}\n"
+                f"Number of doors: {self.doors}\n"
+                f"Type of roof: {self.roof}\n")
     
 year = int = int(input())
 make = input()
