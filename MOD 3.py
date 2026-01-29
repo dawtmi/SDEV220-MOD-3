@@ -49,24 +49,4 @@ doors = int = int(input())
 roof = input()
 car = Automobile('car', year, make, model, doors, roof)
 print(car.vehicle_type, car.year, car.make, car.model, car.doors, car.roof)
-print()
-
-
-
-
-class cat():
-    def __init__(self, age: int, name: str, nem: str):
-        self.age: int = age
-        self.name: str = name
-        self.nem: str = nem 
-
-    def say_age(self):
-        print(self.age)
-
-class Siam(Cat):
-    cat_type: str = 'Siamese'
-    def __init__(self, age: int, name: str, nem: str):
-        super().__init__(age, name, nem)
-
-my_cat = Cat(1, 'cat', 'dog')
-my_cat.say_age()
+print(car)
